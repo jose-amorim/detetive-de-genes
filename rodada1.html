@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detetive de Genes</title>
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="js/script1.js"></script>
+    
+
+    <!-- Bootstrap & dependências -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/4195481e45.js" crossorigin="anonymous"></script>
+    
+</head>
+<body id="body-jogo" class="parallax container">
+
+    <header>
+        <nav class="py-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <span class="text-start fw-bold text-uppercase" id="titulo-site">
+                    Detetive de Genes
+                    </span>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <div class="icon-bar">
+                        <a href="index.html"><i class="fa-sharp fa-solid fa-house me-2"></i></a>
+                        <a href="#"><i class="fa-brands fa-github me-2"></i></i></a>
+                        <a href="sobre.html"><i class="fa-solid fa-circle-info"></i></i></a>
+                    </div>
+                </div>
+              </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+
+        <div class="row">
+            <div class="col-md-8">
+                <figure id="heredograma" class="rounded">
+                    <img id="heredograma-img" src="./img/heredograma1.png" class="rounded" src="">
+                </figure>
+                <figcaption id="heredograma-descricao">
+                    Este é o seu primeiro caso! No heredograma acima, os indivíduos azuis são portadores de uma certa característica... e isso é tudo que sabemos.
+                </figcaption>
+
+            </div>
+            <section id="painel-jogo" class="col-md-4">
+                <h4 id="rodada">Rodada <span id="numero-rodada">1</span></h4>
+
+                <form id="painel-pergunta">
+
+                    <p id="pergunta" class="fw-bold">
+                        Qual é o padrão de herança desta característica?
+                    </p>
+
+                    <input id="alt1" type="radio" name="alternativa" value="1">
+                    <label for="alt1">Autossômica recessiva</label>
+                    <br class="my-2">
+                    <input id="alt2" type="radio" name="alternativa" value="0">
+                    <label for="alt2">Ligada ao sexo recessiva</label>
+                    <br class="my-2">
+                    <input id="alt3" type="radio" name="alternativa" value="0">
+                    <label for="alt3">Autossômica dominante</label>
+                    <br class="my-2">
+                    <input id="alt4" type="radio" name="alternativa" value="0">
+                    <label for="alt4">Ligada ao sexo dominante</label>
+                    <br class="my-2">
+           
+                    <div class="row">
+                        <div id="feedback-resposta-errada" class="col text-danger fw-lighter">
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" id="btnResponder1" class="rounded-pill">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+
+               <article class="pt-3" id="dicas">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <i id="btnDica" class="fa-regular fa-lightbulb"></i>
+                        </div>
+                        <div class="col mx-1">
+                            <label id="label-dicas">Dicas</label>
+                        </div>
+                        <div class="col-md-4">
+                            <p type="submit" id="numero-dicas" class="rounded-pill"><span id="numero-dicas-disponiveis">3</span>/3</p>
+                        </div>
+                    </div>
+
+                    <div id="lista-dicas">
+                        <p id="dica1"><i class="fa-solid fa-1"></i><span>4 e 7 têm os mesmos fenótipos e genótipos.</span></p>
+                        <p id="dica2"><i class="fa-solid fa-2"></i><span>1, 2 e 6 apresentam o mesmo genótipo.</span></p>
+                        <p id="dica3"><i class="fa-solid fa-3"></i><span>1 e 2 são heterozigotos.</span></p>
+                    </div>
+
+                    <div class="row text-center mt-4">
+                        <p class="fw-bold">Pontuação disponível: <span id="pontuacao-disponivel">4</span><span id="pontuacao-possivel">/4</span></p>
+                    </div>
+
+               </article>
+
+                
+            </section>
+
+
+    </main>
+
+</body>
+</html>
