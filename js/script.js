@@ -178,6 +178,8 @@ $(document).ready(() => {
     $('#btnResponder').on('click', (e) => {
         e.preventDefault();
         let alternativa = document.querySelector('input[name="alternativa"]:checked').value;
+        
+        alternativa = (alternativa == 'true') ? 2 : alternativa; //APAGAR
 
         if(alternativa == lista_rodadas[rodada_atual].posicao_resposta && rodada_atual < 4) {
             $('#feedback-resposta-errada').text('');
