@@ -198,7 +198,7 @@ $(document).ready(() => {
         } else if (alternativa == lista_rodadas[rodada_atual].posicao_resposta && rodada_atual == 4) {
             lista_rodadas[rodada_atual].gravarPontuacao();
             
-            location.href = './vitoria.html';
+            location.replace('./vitoria.html');
         } else {
             lista_rodadas[rodada_atual].descontarPontuacao();
             $('#feedback-resposta-errada').text('Resposta incorreta');
