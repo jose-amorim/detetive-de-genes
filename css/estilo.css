@@ -1,0 +1,265 @@
+* {
+    color: white;
+}
+
+.borda {
+    border: 1px solid red;
+}
+
+/* -------------------------- */
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background-image: url('/img/bg.png'); /*background-image: url('../img/bg.png');*/
+    background-color: #000;
+    height: 100vh;
+}
+
+#body-introducao, #body-jogo {
+    backdrop-filter: blur(10px);
+}
+
+/*importar fonte do título do site*/
+#titulo-site {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 3em;
+}
+
+.icon-bar a {
+    color: white;
+}
+
+nav {
+    border-bottom: 2px solid #ff5c00;
+}
+
+#painel-inicial div h4 {
+    color: #ff443a;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#painel-inicial div p {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#painel-inicial div ol li {
+    font-size: 0.9em;
+}
+
+#painel-inicial div ol {
+    list-style: none;
+}
+
+#painel-inicial div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnJogar {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ff443a;
+    padding: 0.5em 1em;
+    animation: pulsar 2s ease-out infinite;
+}
+
+@keyframes pulsar {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+#btnJogar:hover {
+    color: #ff443a;
+}
+
+#lista-instrucoes div div i {
+    color: #ff443a;
+}
+
+#lista-instrucoes div {
+    border-bottom: 1.5em;
+}
+
+#subtitulo {
+    display: inline-block;
+}
+
+#subtitulo {
+    padding: 0 4px;
+}
+
+#painel-jogo #rodada {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+#numero-rodada {
+    color: #ff5c00;
+}
+
+#painel-jogo #pergunta {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#painel-pergunta ul{
+    list-style: none;
+}
+
+#painel-pergunta div label {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#btnResponder {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    background-color: #ff5c00;
+}
+
+#dicas div div:nth-child(1) i {
+    color:#ff5c00;
+    font-size: 2em;
+}
+
+#dicas div div:nth-child(2) {
+    color:#ff5c00;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#numero-dicas {
+    background-color:#fff;
+    color: #ff5c00;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#numero-dicas-disponiveis {
+    color: #ff5c00;
+}
+
+#numero-dicas:hover {
+    cursor: default;
+}
+
+#lista-dicas p {
+    margin: 0;
+}
+
+#lista-dicas i {
+    color: #ff5c00;
+    margin-right: 1em;
+}
+
+#pontuacao-disponivel {
+    color: #ff5c00;
+}
+
+#heredograma img {
+    width: 100%;
+    height: 400px;
+}
+
+#btnDica, #label-dicas {
+    cursor: pointer;
+}
+
+
+#dica1, #dica2, #dica3 {
+    display: none;
+}
+
+#pontuacao-final {
+    color: #b678e6;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+main#vitoria div:nth-child(1) div:nth-child(2) {
+    color: #ff5c00;
+    font-family: 'Raleway', sans-serif;
+}
+
+main#vitoria div:nth-child(2) div:nth-child(2) {
+    font-family: 'Raleway', sans-serif;
+}
+
+.autor {
+    color: #ff5c00;;
+    font-family: 'Raleway', sans-serif;
+}
+
+#feedback-resposta-errada {
+    font-size: 0.9em;
+}
+
+#developed-by {
+    position: absolute;
+    bottom: 0;
+    width: 80vw;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#developed-by a {
+    text-decoration: none;
+    color: #b678e6;
+}
+
+#logo {
+    height: 120px;
+}
+
+#logo-alternativo {
+    height: 100px;
+}
+
+#link-introducao {
+    text-decoration: none;
+    color: #ff5c00;
+    font-weight: 600;
+}
+
+#conteudo-introducao h4{
+    text-transform: uppercase;
+    color: #ff5c00;
+    font-weight: 600;
+}
+
+#conteudo-introducao section {
+    -webkit-column-count:2; /* Chrome, Safari, Opera */
+    -moz-column-count:2;    /* Firefox */
+    column-count:2;         /* padrão */
+}
