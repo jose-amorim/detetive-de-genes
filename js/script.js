@@ -99,7 +99,7 @@ $(document).ready(() => {
         new Rodada(
             1,
             './img/heredograma1.png', // './img/heredograma1.png',
-            'Este é o seu primeiro caso! No heredograma acima, os indivíduos azuis são portadores de uma certa característica... e isso é tudo que sabemos.',
+            "Este é o seu primeiro caso! No heredograma acima, os indivíduos azuis são portadores de uma certa característica... e isso é tudo que sabemos.",
             'Qual é o padrão de herança desta característica?',
             ['Autossômica recessiva',
             'Ligada ao sexo recessiva',
@@ -154,17 +154,17 @@ $(document).ready(() => {
             [
                 'Calcule a chance da mulher II.2 ser portadora do alelo mutante.',
                 'A probabilidade do homem II.1 ter o alelo mutante ao acaso é 1/50.',
-                'Calcule a probabilidade de um casal heterozigoto ter uma criança portadora. '
+                'Calcule a probabilidade de um casal heterozigoto ter uma criança portadora.'
             ]),
         new Rodada(
             5,
             './img/heredograma5.png', //' ./img/heredograma5.png',
             "Você chegou no desafio final! Neste heredograma, o indivíduo 1 é afetado pela síndrome de Marfan. O indivíduo 2 é casado com o indivíduo 1 e não é afetado pela síndrome de Marfan, estes tiveram 2 filhos, o indivíduo 4  é afetado e herda a doença, sua irmã não possui a doença. O indivíduo 4 casa-se com uma mulher que não possui traços da síndrome em sua família, estes têm 4 filhos, onde dois desses tem a síndrome, indivíduo 7 e 8, os outros não possuem manifestações da doença. A mulher indivíduo 7 casa-se com um homem sem traços da síndrome, tem três filhos, dois homens e uma mulher, onde um dos homens possui a síndrome, a mulher não possui e o segundo filho não se sabe ainda.",
-            'Qual a probabilidade do  indivíduo 12 ter a síndrome de Marfan?',
-            ["0%",
-            "25%",
-            "50%",
-            "100%"],
+            "Qual a probabilidade do  indivíduo 12 ter a síndrome de Marfan?",
+            ['0%',
+            '25%',
+            '50%',
+            '100%'],
             2,
             [
                 'Esta síndrome é uma doença dominante altamente penetrante.',
@@ -178,8 +178,6 @@ $(document).ready(() => {
     $('#btnResponder').on('click', (e) => {
         e.preventDefault();
         let alternativa = document.querySelector('input[name="alternativa"]:checked').value;
-        
-        alternativa = (alternativa == 'true') ? 2 : alternativa; //APAGAR
 
         if(alternativa == lista_rodadas[rodada_atual].posicao_resposta && rodada_atual < 4) {
             $('#feedback-resposta-errada').text('');
@@ -198,6 +196,7 @@ $(document).ready(() => {
         } else if (alternativa == lista_rodadas[rodada_atual].posicao_resposta && rodada_atual == 4) {
             lista_rodadas[rodada_atual].gravarPontuacao();
             
+            //location.replace('/vitoria.html'); //location.href = './vitoria.html';
             location.replace('./vitoria.html');
         } else {
             lista_rodadas[rodada_atual].descontarPontuacao();
