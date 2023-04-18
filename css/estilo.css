@@ -136,7 +136,7 @@ nav {
     margin-bottom: 5px;
 }
 
-#btnResponder {
+#btnResponder1, #btnResponder2, #btnResponder3, #btnResponder4, #btnResponder5 {
     color: #fff;
     text-transform: uppercase;
     font-weight: 500;
@@ -183,7 +183,7 @@ nav {
     margin-right: 1em;
 }
 
-#pontuacao-disponivel {
+#pontuacao-disponivel, #pontuacao-possivel {
     color: #ff5c00;
 }
 
@@ -240,10 +240,6 @@ main#vitoria div:nth-child(2) div:nth-child(2) {
 
 #logo {
     height: 120px;
-}
-
-#logo-alternativo {
-    height: 100px;
 }
 
 #link-introducao {
