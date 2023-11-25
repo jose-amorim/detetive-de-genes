@@ -1,6 +1,6 @@
 # Detetive de Genes
 
-Detetive de Genes é um jogo/quiz sobre heredogramas na forma de website feito para o trabalho final da disciplina de Genética I na Universidade Federal do ABC.
+[Detetive de Genes](https://jose-amorim.github.io/detetive-de-genes/index.html) é um jogo/quiz sobre heredogramas na forma de website feito para o trabalho final da disciplina de Genética I na Universidade Federal do ABC.
 
 ## Construído com
 * HTML
